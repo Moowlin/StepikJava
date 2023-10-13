@@ -1,14 +1,50 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stepikjava;
 
-/**
- *
- * @author pupil
- */
-public class Bird {
-    
+public class Bird extends Animal{
+    // -----= ПЕРЕМЕННЫЕ =----- //
+    private String area;
+    private boolean winterFly;
+    // -----= ИНИЦИАЛИЗАТОР =----- //
+    {
+        setType("Птица");
+        setFly(true);
+        area = "NoArea";
+        winterFly = false;
+    }
+    // -----= КОНСТРУКТОРЫ =----- //
+    public Bird(){
+        super();
+        setType("Птица");
+        setFly(true);
+    }
+    public Bird(String type, String name, int age, double weight, boolean isFly, boolean isWalk, boolean isSwim){
+        super(type, name, age, weight, isFly, isWalk, isSwim);
+    }
+    // -----= СЕТТЕРЫ =----- //
+    public void setArea(String area){
+        this.area = area;
+    }
+    public void setWinterFly(boolean winterFly){
+        this.winterFly = winterFly;
+    }
+    // -----= ГЕТТЕРЫ =----- //
+    public String getArea(){
+        return this.area;
+    }
+    public String isWinterFly(){
+        if (this.winterFly == true){
+            return "Да";
+        } else {
+            return "Нет";
+        }
+    }
+    // -----= МЕТОДЫ =----- //
+    public void chirick_chirick(){
+        System.out.println("Chirik-Chirik");
+    }
+    @Override
+    public void display(){
+        //System.out.printf("I am a: %s\t ", getType());
+        System.out.printf("Тип: %s\t Имя: %s\t Возраст: %s\t Вес: %.2f\t Умеет летать: %s\t Умеет ходить: %s\t Умеет плавать: %s\t Среда обитания: %s\t Умеет зимовать: %s\n", getType(), getName(), getAge(), getWeight(), isFly(), isWalk(), isSwimm(), getArea(), isWinterFly());
+    }
 }

@@ -1,21 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package stepikjava;
 
-/**
- *
- * @author pupil
- */
 public class StepikJava {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+        Animal duck = new Animal("Утка", "Утя", 3, 5.8, true, true, true);
+        duck.display();
+        Animal.displayDescription();
+        duck.displayDescription();
+        Fish okun = new Fish();
+        okun.display();
+        Fish.displayDescription();
+        okun.displayDescription();
+    }   
 }
