@@ -97,9 +97,6 @@ public class Animal {
     public void holiday(int day){
         this.weight = weight + 0.1 * day;
     }
-    public void holiday(){
-        this.weight = weight + 0.1;
-    }
     public void  holiday(double m, int n){
         this.weight = weight + m * n;
     }

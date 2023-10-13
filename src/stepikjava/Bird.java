@@ -12,13 +12,11 @@ public class Bird extends Animal{
         winterFly = false;
     }
     // -----= КОНСТРУКТОРЫ =----- //
-    public Bird(){
-        super();
-        setType("Птица");
-        setFly(true);
-    }
-    public Bird(String type, String name, int age, double weight, boolean isFly, boolean isWalk, boolean isSwim){
+    public Bird(){}
+    public Bird(String type, String name, int age, double weight, boolean isFly, boolean isWalk, boolean isSwim, String area, boolean winterFly){
         super(type, name, age, weight, isFly, isWalk, isSwim);
+        setArea(area);
+        setWinterFly(winterFly);
     }
     // -----= СЕТТЕРЫ =----- //
     public void setArea(String area){
